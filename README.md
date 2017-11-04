@@ -53,7 +53,3 @@
 - Google Adsense?
 - Users have many comments
 - Action Cable for comments
-
-
-
-
