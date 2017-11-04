@@ -170,7 +170,7 @@
    font-size: 16px;
  }
  
- button {
+ .login-btn {
    position: absolute;
    z-index: 100;
    width: 149px;
@@ -186,11 +186,11 @@
    transition: 0.5s;
    cursor: pointer;
  }
- button:hover {
+ .login-btn:hover {
    color: #000;
    background: #fff;
  }
- button:focus {
+ .login-btn:focus {
    outline-width: 0;
  }
  
@@ -214,5 +214,12 @@
    margin-left: 125px;
    margin-top: 181px;
  }
- 
+ .sign-up {
+   margin-top: -80px;
+ }
+ .fix-text {
+   text-align: center;
+   text-decoration: none; 
+   padding-top: 10px;
+ }
  
