@@ -1,0 +1,53 @@
+<div class="al"></div>
+<div class="container1">
+  <div class="header flux">LOGIN </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
+
+  <!-- <input id='username' class='text' onfocus="handle2()" class='inc2' type="text" name="Username" placeholder='Username' value=""> -->
+  <%= f.text_field :email, id: 'username',  onfocus: "handle2()", class: 'text inc2', name: "Username", placeholder: 'Username' %>
+
+  
+
+  <!-- <input id='' class='pass' onfocus="" class='inc1' type="pass" name="Password" placeholder='Password' value=""> -->
+
+
+  <%= f.text_field :password, id: 'password',  onfocus: "handle1()", class: 'pass inc1', name: "Password", placeholder: 'Password' %>
+
+  
+
+  <%= f.submit "Login", class: "login-btn" %>
+  
+  <svg width="390" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect id='rect' class='rect1'   x="45px"  y="300px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #fff; stroke-width: 1px; fill: #000" />
+  </svg>
+  <% end %>
+
+<!-- <button class="sign-up">Sign Up</button> -->
+<%= link_to "Sign Up", new_user_registration_path, class: "sign-up login-btn fix-text" %>
+</div>
+
+
+<script>
+  let rect = document.getElementById("rect");
+  let username = document.getElementById("username");
+  let password = document.getElementById("password");
+
+  function handle1() {
+    rect.setAttribute("class", "rect2");
+  }
+
+  function handle2() {
+    rect.setAttribute("class", "rect1");
+  }
+
+    //For codepen header!!!
+    setTimeout(() => {
+      password.focus();
+    }, 500);
+    
+    setTimeout(() => {
+      username.focus();
+    }, 1500);
+  </script>
