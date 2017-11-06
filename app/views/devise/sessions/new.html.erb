@@ -1,33 +1,39 @@
 <div class="al"></div>
-<div class="container1">
-<div class="card "><div class="card-content text-white"><span class="card-title">Card Title</span><p>I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p></div></div>
-  <div class="header flux">LOGIN </div>
-
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="container1">
+    <div class="card card-content white-text">
+      <p>I am a very simple card. I am good at containing small bits of information.
+      I am convenient because I require little markup to use effectively.</p></div>
+   
+      <div class="centernow">
+        <div class="header flux">LOGIN</div>
+    
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
 
-  <!-- <input id='username' class='text' onfocus="handle2()" class='inc2' type="text" name="Username" placeholder='Username' value=""> -->
-  <%= f.text_field :email, id: 'username',  onfocus: "handle2()", class: 'text inc2', name: "Username", placeholder: 'Username' %>
+        
+          <%= f.text_field :email, id: 'username',  onfocus: "handle2()", class: 'text inc2', name: "Username", placeholder: 'Username' %>
 
+        
+          <%= f.text_field :password, id: 'password',  onfocus: "handle1()", class: 'pass inc1', name: "Password", placeholder: 'Password' %>
+          
+          <%= f.submit "Login", class: "login-btn" %>
+  
+          <svg width="390" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect id='rect' class='rect1'   x="45px"  y="300px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #fff; stroke-width: 1px; fill: #000" />
+          </svg>
+
+        </div>
+      </div>
+    </div>
+  </div>  
+
+          <% end %>
+
+
+          <%= link_to "Sign Up", new_user_registration_path, class: "sign-up login-btn fix-text" %>
   
 
-  <!-- <input id='' class='pass' onfocus="" class='inc1' type="pass" name="Password" placeholder='Password' value=""> -->
 
-
-  <%= f.text_field :password, id: 'password',  onfocus: "handle1()", class: 'pass inc1', name: "Password", placeholder: 'Password' %>
-
-  
-
-  <%= f.submit "Login", class: "login-btn" %>
-  
-  <svg width="390" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect id='rect' class='rect1'   x="45px"  y="300px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #fff; stroke-width: 1px; fill: #000" />
-  </svg>
-  <% end %>
-
-<!-- <button class="sign-up">Sign Up</button> -->
-<%= link_to "Sign Up", new_user_registration_path, class: "sign-up login-btn fix-text" %>
-</div>
 
 
 
