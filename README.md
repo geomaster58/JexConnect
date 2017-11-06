@@ -18,7 +18,7 @@
  2. Install devise, Petergate
  3. Add area and name to Devise
  4. Connecting Users to posts that they create (post model)
- 5. Connect Users to Users
+ 5. Connect Users to Users (Add, Block, Delete)
  6. Create Landing Page( Displays connections by default, button to display area 
     posts ) Profile Page
  7. Create Clean Time Counter
@@ -28,6 +28,7 @@
 10. Google Adsense? 
 11. Users have many comments
 12. Action Cable for comments
+13. Impletment videos for live online meetings
 
 
 
@@ -53,7 +54,3 @@
 - Google Adsense?
 - Users have many comments
 - Action Cable for comments
-
-
-
-
