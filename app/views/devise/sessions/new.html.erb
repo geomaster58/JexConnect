@@ -1,62 +1,47 @@
-<div class="al"></div>
+ <div class="al"></div>
   <div class="container1">
-    <div class="card card-content white-text">
-      <p>I am a very simple card. I am good at containing small bits of information.
-      I am convenient because I require little markup to use effectively.</p></div>
-   
-      <div class="centernow">
-        <div class="header flux">LOGIN</div>
-    
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
+    <div class="header flux">LOGIN </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.email_field :email, id: 'username',  onfocus: "handle2()", class: 'text inc2',  placeholder: 'Username' %>
+      <%= f.password_field :password, id: 'password',  onfocus: "handle1()", class: 'pass inc1', placeholder: 'Password' %>
+      <%= f.submit "Login", class: "login-btn" %>
+      <% end %>
+      <svg width="390" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <rect id='rect' class='rect1'   x="45px"  y="300px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #fff; stroke-width: 1px; fill: #000" />
+      </svg>
+      <%= link_to "Sign Up", new_user_registration_path, class: "sign-up login-btn fix-text" %>
 
-        
-          <%= f.text_field :email, id: 'username',  onfocus: "handle2()", class: 'text inc2', name: "Username", placeholder: 'Username' %>
-
-        
-          <%= f.text_field :password, id: 'password',  onfocus: "handle1()", class: 'pass inc1', name: "Password", placeholder: 'Password' %>
-          
-          <%= f.submit "Login", class: "login-btn" %>
-  
-          <svg width="390" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <rect id='rect' class='rect1'   x="45px"  y="300px"   rx="27" ry="27" width="300px" height="50px" style="stroke: #fff; stroke-width: 1px; fill: #000" />
-          </svg>
-
-        </div>
+      
+        <div class="header neon footer">we do recover </div>
+          <p> </p>
+          <p> </p>
+        </div>  
       </div>
     </div>
-  </div>  
-
-          <% end %>
-
-
-          <%= link_to "Sign Up", new_user_registration_path, class: "sign-up login-btn fix-text" %>
-  
-
-
+  </div>
 
 
 
 
 <script>
-  let rect = document.getElementById("rect");
-  let username = document.getElementById("username");
-  let password = document.getElementById("password");
+let rect = document.getElementById("rect");
+let username = document.getElementById("username");
+let password = document.getElementById("password");
 
-  function handle1() {
-    rect.setAttribute("class", "rect2");
-  }
+function handle1() {
+  rect.setAttribute("class", "rect2");
+}
 
-  function handle2() {
-    rect.setAttribute("class", "rect1");
-  }
+function handle2() {
+  rect.setAttribute("class", "rect1");
+}
 
-    //For codepen header!!!
-    setTimeout(() => {
-      password.focus();
-    }, 500);
-    
-    setTimeout(() => {
-      username.focus();
-    }, 1500);
-  </script>
+  # //For codepen header!!!
+  setTimeout(() => {
+    password.focus();
+  }, 500);
+  
+  setTimeout(() => {
+    username.focus();
+  }, 1500);
+</script>
