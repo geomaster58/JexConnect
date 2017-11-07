@@ -1,11 +1,4 @@
-<div class="card-container">
-<div class="card card-text">
-<div class="w3-panel w3-border">
-    <h4><b>John Doe</b></h4> 
-    <p>Architect & Engineer</p> 
-    </div>
-  </div>
-</div>
+<%= stylesheet_link_tag "register_page" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -31,6 +24,10 @@
   <div class="actions">
   <%= f.submit "Sign Up", class: "login-btn" %>
   </div>
+
+
 <% end %>
 
+
 <%= render "devise/shared/links" %>
+

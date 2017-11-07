@@ -230,37 +230,5 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: white;
 }
 
-.card {
-    
-   
-    border-radius: 5px; /* 5px rounded corners */
-    border-color: white;
-    border-width: medium;
-    background: black;
-    width: 400px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.w3-border{
-  color: white
-  
-}
 
-.w3-panel{
-  color: white
-}
-/* Add some padding inside the card container */
-.card-container {
-    padding: 2px 16px;
-    width: 70px;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 80px;
-    
-}
-
-.card-text {
-  color: white;
-}
