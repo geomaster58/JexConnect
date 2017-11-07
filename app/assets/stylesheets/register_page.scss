@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/css?family=PT+Serif);
-
+@import "materialize";
 html,
 body {
   margin: 0;
@@ -18,7 +18,7 @@ html {
 body {
   margin: auto;
   width: 60%;
-  height: 98%;
+  height: 94%;
   background-color: black;
   border: 2px solid white;
   border-radius: 2px;
@@ -27,7 +27,7 @@ body {
 
 body:before {
    display: block;
-  content: 'newbie';
+  
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 1em 0.75em 0.5em;
@@ -42,9 +42,7 @@ body:after {
   content: 'Maecenas sed lorem diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare tusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \A\A Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem ipsum lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. \A\A Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.';
   padding: 1em;
   font-size: 0.9rem;
-  column-count: 2;
-  column-gap: 2em;
-  column-rule: 1px solid #f5f5f5;
+  
   white-space: pre-wrap;
 }
 
@@ -57,7 +55,8 @@ body:after {
 
 @media (max-width: 550px) {
   body {
-    width: 95%;
+    width: 87%;
+    margin-left: 20px;
   }
 }
 
@@ -87,4 +86,25 @@ body:after {
   to {
     transform: none;
   }
+}
+
+.newnew {
+  margin-top: 15px; 
+  margin-left: 70px;
+}
+
+.newnewbutton {
+  margin-top: 320px;
+  margin-left: 318px;
+}
+
+.field {
+  color: white;
+  margin: auto;
+  margin-top: 15px;
+  width: 280px;
+}
+
+.input-field {
+  text-align: center;
 }
