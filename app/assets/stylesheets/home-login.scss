@@ -88,9 +88,11 @@ html,
    margin-left: auto;
    margin-right: auto;
    margin-top: 11px;
+   z-index: -1;
    -webkit-box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
    -moz-box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
    box-shadow: 0px 0px 114px 2px rgba(0, 0, 0, 0.75);
+
  }
  .container svg {
    position: absolute;
@@ -208,6 +210,13 @@ html,
  .text-white {
    color: white;
  }
- .card {
-   background-color: red;
- }
+ 
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px black inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: white;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px black inset;
+    -webkit-text-fill-color: white;
+}
+ 
