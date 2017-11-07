@@ -39,7 +39,7 @@ body:before {
 body:after {
   display: block;
   font-family: 'PT Serif', sans-serif;
-  content: 'Maecenas sed lorem diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare tusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \A\A Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem ipsum lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. \A\A Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum.';
+  content: 'Maecenas sed lorem diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare tusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \A\A Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem ipsum lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.';
   padding: 1em;
   font-size: 0.9rem;
   
@@ -51,7 +51,6 @@ body:after {
     column-count: 1;
   }
 }
-
 
 @media (max-width: 550px) {
   body {
