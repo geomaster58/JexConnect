@@ -39,9 +39,10 @@ body:before {
 body:after {
   display: block;
   font-family: 'PT Serif', sans-serif;
-  content: 'Maecenas sed lorem diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare tusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. \A\A Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem ipsum lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.';
+  content: "You ever seen a black panther in red undies wrestling a tiger shark?  Yeah, me neither.  But, we have something greater in common.  That, my friend, is the disease of addiction.  Some of us have found a way out, some of us are still struggling and far too many we have lost.  This is nothing but a spark.  A spark engulfed in hope.  That our connection spreads like a wildfire.  That we could show it's possible...\A We do recover.";
   padding: 1em;
-  font-size: 0.9rem;
+  font-size: 18px;
+  text-align: center;
   
   white-space: pre-wrap;
 }
@@ -87,15 +88,26 @@ body:after {
   }
 }
 
-.newnew {
+.newbster {
   margin-top: 15px; 
   margin-left: 70px;
 }
 
-.newnewbutton {
-  margin-top: 320px;
-  margin-left: 318px;
+.login-btn {
+  margin-top: 225px;
+  margin-left: 70px;
 }
+
+@media (max-width: 768px) {
+  .login-btn {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+    margin-top: 345px;
+  }
+}
+
+
 
 .field {
   color: white;

@@ -1,0 +1,63 @@
+@import "materialize";
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+.card {
+  max-width: 30em;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  padding: 2em;
+  background-color: rgb(234, 234, 234);
+  color: #444;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+}
+
+.profile-img {
+  z-index: 100;
+  display: block;
+  height: 7em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  border: .5em solid #f2f2f2;
+  border-radius: 100%;
+  box-shadow:  0 1px 0 0 rgba(0,0,0,.1);
+}
+
+.profile-text {
+  margin-top: -3.5em;
+  padding: 5em 1.5em 1.5em 1.5em; 
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1)
+}
+
+.profile-name{
+  margin-right: -1em;
+  margin-bottom: .75em;
+  margin-left: -1em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: .75em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.profile-title {
+  color: #ccc;
+}
+
+.nav-wrapper {
+  background-color: black;
+}
+
+.jexlogo {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: -60px;
+  
+}

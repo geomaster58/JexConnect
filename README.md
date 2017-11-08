@@ -3,27 +3,27 @@
 ## GOALS
 
 - create pages
-- Home / Controller Gen
+x Home / Controller Gen
 - Login / Devise / Petergate?
 - Landing page (Button) views connections (Button) view connections in area
 - Profile page, counter/ruby day library
 - links/buttons
 - create routes
-- create users / users can drop in on other areas
+x create users / users can drop in on other areas
 - create treatment 
 
 ## STEPS
 
- 1. Generate HomePage
+ 1. DONE Generate HomePage
  2. Install devise, Petergate
  3. Add area and name to Devise
- 4. Connecting Users to posts that they create (post model)
+ 4. DONE Connecting Users to posts that they create (post model)
  5. Connect Users to Users (Add, Block, Delete)
  6. Create Landing Page( Displays connections by default, button to display area 
     posts ) Profile Page
  7. Create Clean Time Counter
  7. Impliment picture uploading (reddis) AWS 
- 8. Install Materialize
+ 8. DONE Install Materialize
  9. Style
 10. Google Adsense? 
 11. Users have many comments
