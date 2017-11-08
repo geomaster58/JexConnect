@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users_connect, only: [:show]
   resources :posts
   devise_for :users
 
