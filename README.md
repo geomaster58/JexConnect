@@ -35,11 +35,11 @@ x create users / users can drop in on other areas
 
 ## Richi
  
-- Generate HomePage
+- Generate HomePage                    DONE
 - Connecting Users to posts that they create (post model)
-- Connect Users to Users
-- Create Clean Time Counter
-- Install Materialize
+- Connect Users to Users  
+- Create Clean Time Counter 
+- Install Materialize                   DONE
 - Style
 
 

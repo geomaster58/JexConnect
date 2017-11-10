@@ -59,5 +59,25 @@
   font-size: 30px;
   margin-left: 20px;
   margin-top: -60px;
-  
+}
+
+.profile-title {
+  color: rgb(116, 116, 117);
+}
+
+@media (max-width: 850px) {
+  body:after {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    width: 92%;
+    margin-left: 16px;
+  }
+}
+
+.edit-button {
+  color: black;
 }

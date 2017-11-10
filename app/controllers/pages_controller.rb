@@ -7,5 +7,21 @@ class PagesController < ApplicationController
     def landing_page
 
     end
+
+    def profile
+
+    end
+
+    def area
+
+    end
+
+    def meetings
+
+    end
+
+    def settings
+
+    end
     
 end
