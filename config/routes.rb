@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   get 'profile', to: 'pages#profile'
-
+  get 'landing_page', to: 'pages#landing_page'
   get 'login', to: 'pages#login'
   root to: 'pages#home'
 end

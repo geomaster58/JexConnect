@@ -1,31 +1,20 @@
 <%= stylesheet_link_tag "register_page" %>
-<h1 class="flux newnew">NEWBSTER</h1>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<h1 class="flux newbster">NEWBSTER</h1>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    
+  <div class="field"> 
     <%= f.email_field :email, autofocus: true, class: "input-field", placeholder: 'Email' %>
-  
 
-  
-    
-    
     <%= f.password_field :password, autocomplete: "off", class: "input-field", placeholder: 'Password' %>
-  
-
-  
     
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "input-field", placeholder: 'Confirm password' %>
-  
-    <%= f.submit "Sign Up", class: "login-btn newnewbutton" %>
+    
+    <%= f.submit "Sign Up", class: "login-btn" %>
   </div>
-</div> 
-  
-
+ 
 
 <% end %>
-
 
 <%= render "devise/shared/links" %>
 

@@ -4,6 +4,6 @@ class UsersConnectController < ApplicationController
   end
 
   def connect
-    
+    redirect_to root_path
   end
 end
