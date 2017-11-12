@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif);
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import "materialize";
 html,
 body {
@@ -38,8 +38,8 @@ body:before {
 
 body:after {
   display: block;
-  font-family: 'PT Serif', sans-serif;
-  content: "You ever seen a black panther in red undies wrestling a tiger shark?  Yeah, me neither.  But, we have something greater in common.  That, my friend, is the disease of addiction.  Some of us have found a way out, some of us are still struggling and far too many we have lost.  This is nothing but a spark.  A spark engulfed in hope.  That our connection spreads like a wildfire.  That we could show it's possible...\A We do recover.";
+  font-family: 'Barlow Condensed', sans-serif;
+  content: "YOU EVER SEEN A BLACK PANTHER IN RED UNDIES WRESTLING A TIGER SHARK?  YEAH, ME NEITHER.  BUT, WE HAVE SOMETHING GREATER IN COMMON.  THAT, MY FRIEND, IS THE DISEASE OF ADDICTION.  SOME OF US HAVE FOUND A WAY OUT, SOME ARE STILL STRUGGLING AND FAR TOO MANY WE HAVE LOST.  THIS IS NOTHING BUT A SPARK.  A SPARK ENGULFED IN HOPE.  THAT OUR CONNECTION SPREADS LIKE A WILD FIRE.  THAT WE MAY SHOW ITS POSSIBLE...\A WE DO RECOVER.";
   padding: 1em;
   font-size: 18px;
   text-align: center;
