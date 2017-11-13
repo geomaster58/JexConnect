@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require cable
 //= require turbolinks
 //= require materialize-sprockets
 //= require gritter
