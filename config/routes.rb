@@ -4,13 +4,10 @@ Rails.application.routes.draw do
   resources :users_connect, only: [:show]
   resources :posts
   # get "/settings", to: "devise/registrations#edit"
-   # devise_for :users #, controllers: { registrations: 'registrations' }
-
-
+  # devise_for :users #, controllers: { registrations: 'registrations' }
   get 'meetings', to: 'pages#meetings'
   get 'area', to: 'pages#area'
   get 'profile', to: 'pages#profile'
   get 'landing_page', to: 'pages#landing_page'
-  get 'login', to: 'pages#login'
   root to: 'pages#home'
 end
