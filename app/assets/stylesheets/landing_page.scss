@@ -4,12 +4,12 @@
 
 .card {
   max-width: 30em;
-  height: 120px;
+  height: 125px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 90px;
   padding: 2em;
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(17, 17, 17);
   color: #444;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -25,8 +25,7 @@
   z-index: 100;
   display: block;
   height: 7em;
-  margin-left: auto;
-  margin-top: auto;
+  margin-top: -65px;
   border-radius: 100%;
   
 }
@@ -87,6 +86,12 @@
 
 textarea {
   color: white;
-  border-radius: black;
+  outline: none;
   background-color: black;
+  margin-top: -27px;
+
+}
+
+.boom {
+  margin-top: 18px;
 }
