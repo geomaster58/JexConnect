@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :posts
   devise_for :users
 
+  get 'connections', to: 'pages#connections'
   get 'meetings', to: 'pages#meetings'
   get 'area', to: 'pages#area'
   get 'settings', to: 'pages#settings'
