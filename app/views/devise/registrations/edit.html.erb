@@ -6,8 +6,8 @@
       <div class="row">
         <div action="#">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
           <div class="file-field input-field">
-          <%= devise_error_messages! %>
             <div class="btn">
               <span>File</span>
               <input type="file" multiple>
@@ -57,8 +57,20 @@
           <label for="home_group">Current Password</label>
   </div>
   <div class="input-field col s6">
+          <%= f.password_field :password, id: "current_password" %>
+          
+          <label for="home_group">New Password</label>
+  </div>
+   <div class="input-field col s6">
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <label for="home_group">new Password Confirmation</label>
+  </div>
+  
+ 
+  <div class="input-field col s6">
     <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
   </div>
+
 </div>
 
 <% end %>
