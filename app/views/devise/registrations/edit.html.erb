@@ -2,10 +2,12 @@
 <div class="container3">
   <h1 class="editprofile">edit profile</h1>
   <div class="row">
-    <form class="col s12">
+    <div class="col s12">
       <div class="row">
-        <form action="#">
+        <div action="#">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <div class="file-field input-field">
+          <%= devise_error_messages! %>
             <div class="btn">
               <span>File</span>
               <input type="file" multiple>
@@ -14,42 +16,52 @@
               <input class="file-path validate" type="text" placeholder="profile photo">
             </div>
           </div>
-        </form>
-  <form action="#">
-    <input class="datepicker btn" placeholder="Clean/Sobriety Date">
-  </form>
+        </div>
+  <div action="#">
+    <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date" %>
+  </div>
         <div class="input-field col s6">
-          <input id="first_name" type="text">
+          <%= f.text_field :first_name, id: "first_name" %>
           <label for="first_name">First</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text">
+          <%= f.text_field :last_name, id: "last_name" %>
           <label for="last_name">Last</label>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 
   <div class="cleanopt">
-    <form action="#">
+    <div action="#">
       <p>
-        <input name="group1" type="radio" id="test1" />
+        <%= f.radio_button :sober, true, name: "group1",  id: "test1"%>
         <label for="test1">Clean</label>
        
-        <input name="group1" type="radio" id="test2" />
+        <%= f.radio_button :sober, false, name: "group1",  id: "test2"%>
         <label for="test2">Sober</label>
       </p>
-    </form>
+    </div>
+  </div>
+  <div class="input-field col s6">
+          <%= f.email_field :email, id: "first_name" %>
+          <label for="home_group">Email</label>
   </div>
 
   <div class="input-field col s6">
-          <input id="first_name" type="text">
+          <%= f.text_field :area, id: "first_name" %>
           <label for="home_group">Home Group</label>
   </div>
   <div class="input-field col s6">
-    <%= link_to "Done", profile_path, class: "waves-effect waves-light btn" %> 
+          <%= f.password_field :current_password, id: "current_password" %>
+          <label for="home_group">Current Password</label>
+  </div>
+  <div class="input-field col s6">
+    <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
   </div>
 </div>
+
+<% end %>
 
 <script>
   $('.datepicker').pickadate({
