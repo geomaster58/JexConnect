@@ -1,0 +1,17 @@
+<%= render "shared/navbar" %>
+<%= stylesheet_link_tag "profile" %>
+
+<div class="card">
+  <%= link_to "edit", edit_user_registration_path, class: "material-icons edit-button" %>
+  <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img">
+  <%= current_user.start_date.strftime("%m/%d/%y") unless current_user.start_date.nil? %>
+    <div class="profile-text">
+      <div class="datecolor">
+        <%= time_dif current_user %>
+      </div>
+      
+      <h1 class="profile-name">Jonathan Doe</h1>
+        <span class="profile-title"><b>Home Group:</b> Message of Hope, Promise of freedom</span>
+    </div>
+</div>
+

@@ -1,7 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
 @import "materialize";
-html,
 body {
   margin: 0;
 }
@@ -34,17 +31,6 @@ body:before {
   border-bottom: 1px solid #f5f5f5;
   font-size: 1.2em;
   text-transform: uppercase;
-}
-
-body:after {
-  display: block;
-  font-family: 'Barlow Condensed', sans-serif;
-  content: "YOU EVER SEEN A BLACK PANTHER IN RED UNDIES WRESTLING A TIGER SHARK?  YEAH, ME NEITHER.  BUT, WE HAVE SOMETHING GREATER IN COMMON.  THAT, MY FRIEND, IS THE DISEASE OF ADDICTION.  SOME OF US HAVE FOUND A WAY OUT, SOME ARE STILL STRUGGLING AND FAR TOO MANY WE HAVE LOST.  THIS IS NOTHING BUT A SPARK.  A SPARK ENGULFED IN HOPE.  THAT OUR CONNECTION SPREADS LIKE A WILD FIRE.  THAT WE MAY SHOW ITS POSSIBLE...\A WE DO RECOVER.";
-  padding: 1em;
-  font-size: 18px;
-  text-align: center;
-  
-  white-space: pre-wrap;
 }
 
 @media (max-width: 850px) {
@@ -88,12 +74,6 @@ body:after {
   }
 }
 
-.newbster {
-  margin-top: 15px; 
-  margin-left: 70px;
-}
-
-
 .field {
   color: white;
   margin: auto;
@@ -104,3 +84,45 @@ body:after {
 .input-field {
   text-align: center;
 }
+
+
+
+.editprofile {
+  font-size: 30px;
+  text-align: center;
+  
+  }
+
+
+.container3 {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+.cleanopt {
+  margin-left: 99px;
+  margin-bottom: 30px;
+}
+
+label {
+    padding-right: 25px;
+  }
+
+.input-field { 
+  padding: 10px;
+ }
+
+.login-btn {
+  color: white;
+}
+
+
+
+
+
+
+
+
+

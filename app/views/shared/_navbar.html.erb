@@ -1,23 +1,27 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="jexlogo">JEX</a>
+      <%= link_to "JEX", landing_page_path, class: "jexlogo" %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Connections</a></li>
-        <li><a href="badges.html">Area</a></li>
-        <li><a href="collapsible.html">Meetings</a></li>
-        <li><a href="mobile.html">Settings</a></li>
+        <li><%= link_to "Home", landing_page_path %></li>
+        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to "Area", area_path %></li>
+        <li><%= link_to "Meetings", meetings_path %></li>
+        <li><%= link_to "settings", settings_path, class: "large material-icons" %></i></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Connections</a></li>
-        <li><a href="badges.html">Area</a></li>
-        <li><a href="collapsible.html">Meetings</a></li>
-        <li><a href="mobile.html">Settings</a></li>
+
+        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to "Area", area_path %></li>
+        <li><%= link_to "Meetings", meetings_path %></li>
+        <li><%= link_to "Settings", settings_path %></li>
       </ul>
     </div>
   </nav>
 
-  <script type>
+
+
+  <script>
     $(".button-collapse").sideNav();
   </script>
