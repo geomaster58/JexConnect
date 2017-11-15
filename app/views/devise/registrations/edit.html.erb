@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag "edit" %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <div class="container3">
-  <h1 class="editprofile">edit profile</h1>
+  <h1 class="editprofile">Edit Profile</h1>
   <div class="row">
     <div class="col s12">
       <div class="row">
-        <div action="#">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= devise_error_messages! %>
+      <%= js add_gritter(devise_error_messages!, title: "Pay attention!", sticky: true, :time => 1000) %>
+        <!-- <div>
           <div class="file-field input-field">
             <div class="btn">
               <span>File</span>
@@ -16,10 +16,10 @@
               <input class="file-path validate" type="text" placeholder="profile photo">
             </div>
           </div>
-        </div>
-  <div action="#">
-    <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date" %>
-  </div>
+        </div> -->
+        <div>
+          <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date" %>
+      </div>
         <div class="input-field col s6">
           <%= f.text_field :first_name, id: "first_name" %>
           <label for="first_name">First</label>
@@ -33,33 +33,33 @@
   </div>
 
   <div class="cleanopt">
-    <div action="#">
+    <div >
       <p>
-        <%= f.radio_button :sober, true, name: "group1",  id: "test1"%>
+        <%= f.radio_button :sober, "true",  id: "test1"%>
         <label for="test1">Clean</label>
        
-        <%= f.radio_button :sober, false, name: "group1",  id: "test2"%>
-        <label for="test2">Sober</label>
+        <%= f.radio_button :sober, "false",  id: "test2"%>
+        <label for="test2">Working on it</label>
       </p>
     </div>
   </div>
   <div class="input-field col s6">
-          <%= f.email_field :email, id: "first_name" %>
-          <label for="home_group">Email</label>
+          <%= f.email_field :email, id: "email" %>
+          <label for="email">Email</label>
   </div>
 
   <div class="input-field col s6">
-          <%= f.text_field :area, id: "first_name" %>
-          <label for="home_group">Home Group</label>
+          <%= f.text_field :area, id: "area" %>
+          <label for="area">Home Group</label>
   </div>
   <div class="input-field col s6">
           <%= f.password_field :current_password, id: "current_password" %>
-          <label for="home_group">Current Password</label>
+          <label for="current_password">Current Password</label>
   </div>
   <div class="input-field col s6">
-          <%= f.password_field :password, id: "current_password" %>
+          <%= f.password_field :password, id: "password" %>
           
-          <label for="home_group">New Password</label>
+          <label for="password">New Password</label>
   </div>
    <div class="input-field col s6">
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
@@ -67,9 +67,9 @@
   </div>
   
  
-  <div class="input-field col s6">
-    <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
-  </div>
+  
+    <%= f.submit "Done",  class: "waves-effect waves-light btn col s6" %> 
+  
 
 </div>
 
