@@ -25,6 +25,19 @@
   text-align: center;
 }
 
-.neon {
+@media (max-width: 850px) {
+  body:after {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    width: 92%;
+    margin-left: 16px;
+  }
+}
+
+.flux {
   font-size: 35px;
 }

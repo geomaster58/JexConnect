@@ -2,6 +2,7 @@
 <nav>
     <div class="nav-wrapper">
       <%= link_to "JEX", landing_page_path, class: "jexlogo" %>
+
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "Home", landing_page_path %></li>
@@ -11,6 +12,7 @@
         <li><%= link_to "group", connections_path, class: "large material-icons" %></i></li>
         <li><%= link_to "settings", settings_path, class: "large material-icons" %></i></li>
       </ul>
+
       <ul class="side-nav" id="mobile-demo">
         <li><%= link_to "Profile", profile_path %></li>
         <li><%= link_to "Area", area_path %></li>
