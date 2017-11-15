@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "register_page" %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
-<div class="container3">
+
 <div class="card">
   <div class="row">
     <h1 class="flux newbster">NEWBSTER</h1>
@@ -13,13 +13,12 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "input-field", placeholder: 'Confirm password' %>
       </div>
       <div class="purpose">
-        <center> YOU EVER SEEN A BLACK PANTHER IN RED UNDIES WRESTLING A TIGER SHARK?  YEAH, ME NEITHER.  BUT, WE   HAVE SOMETHING GREATER IN COMMON.  THAT, MY FRIEND, IS THE DISEASE OF ADDICTION.  SOME OF US HAVE FOUND A WAY OUT, SOME ARE STILL STRUGGLING AND FAR TOO MANY WE HAVE LOST.  THIS IS NOTHING BUT A SPARK.  A SPARK ENGULFED IN HOPE.  THAT OUR CONNECTION SPREADS LIKE A WILD FIRE.  THAT WE MAY SHOW ITS POSSIBLE... <center>WE DO RECOVER.</center> </center> 
+        <center> YOU EVER SEEN A BLACK PANTHER IN RED UNDIES WRESTLING A TIGER SHARK?  YEAH, ME NEITHER.  BUT, WE HAVE SOMETHING GREATER IN COMMON.  THAT, MY FRIEND, IS THE DISEASE OF ADDICTION.  SOME OF US HAVE FOUND A WAY OUT, SOME ARE STILL STRUGGLING AND FAR TOO MANY WE HAVE LOST.  THIS IS NOTHING BUT A SPARK.  A SPARK ENGULFED IN HOPE.  THAT OUR CONNECTION SPREADS LIKE A WILD FIRE.  THAT WE MAY SHOW IT'S POSSIBLE... <center>WE DO RECOVER.</center> </center> 
       </div>
       <div class="input-field col s12">
         <%= link_to "Done", profile_path, class: "waves-effect waves-light btn" %> 
       </div>
   </div>
-</div>
 </div>
 
 <% end %>

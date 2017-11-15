@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'area', to: 'pages#area'
   get 'settings', to: 'pages#settings'
   get 'profile', to: 'pages#profile'
-  get 'landing_page', to: 'pages#landing_page'
   get 'login', to: 'pages#login'
-  root to: 'pages#home'
+  root to: 'pages#landing_page'
 end

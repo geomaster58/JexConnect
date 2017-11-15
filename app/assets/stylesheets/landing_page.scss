@@ -95,3 +95,47 @@ textarea {
 .boom {
   margin-top: 18px;
 }
+
+.block
+        {
+            width: 450px;
+            float: left;
+            border: 1px solid white;
+        }
+        
+        .comments
+        {
+            width: 400px;
+            float: left;
+            border: 1px solid white;
+            min-height: 40px;
+        }
+        .commentsblock
+        {    
+            margin-top: 25px;
+            width: 400px;
+            float: left;
+            border: 1px solid white;
+        }
+        .commentbox
+        {
+            overflow-y: hidden;
+            height: 20px;
+            width: 400px;
+        }
+        .divfloat
+        {
+            float: left;
+        }
+        .imageicons
+        {
+            height: 40px;
+            width: 42px;
+        }
+        .commentinfo
+        {
+            background: black;
+            color: white;
+            word-wrap: break-word;
+            width: 352px;
+        }

@@ -6,14 +6,7 @@ body {
   margin: 0;
 }
 
-html {
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  display: flex;
-  color: white;
-  font-size: 1em;
-}
+
 
 @keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
@@ -56,13 +49,15 @@ html {
 
 .input-field {
   text-align: center;
+  margin-top: -30px;
 }
 
 .card {
   margin: auto;
-  margin-top: 40px;
-  width: 70%;
-  height: 94%;
+  margin-top: 35px;
+  margin-bottom: auto;
+  width: 60%;
+  
   background-color: black;
   border-radius: 2px;
   border: 2px solid white;
@@ -77,11 +72,13 @@ html {
 
 @media (max-width: 780px) {
   body {
-    width: 500px;
-    margin-left: -56px;
-
+    width: 640px;
+    margin-left: -120px;
+    margin-top: -1px;
+    
   }
 }
+
 
 .purpose {
   display: flex;
@@ -91,6 +88,11 @@ html {
   font-size: 18px;
   text-align: center;
   white-space: pre-wrap;
+  color: white;
+}
+
+.btn {
+  margin-bottom: 10px;
 }
 
 
