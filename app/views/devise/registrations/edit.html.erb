@@ -17,8 +17,8 @@
             </div>
           </div>
         </div> -->
-        <div>
-          <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date" %>
+        <div id="date">
+          <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
       </div>
         <div class="input-field col s6">
           <%= f.text_field :first_name, id: "first_name" %>
@@ -84,6 +84,12 @@
     closeOnSelect: true,
     closeOnClear: true,
   });
+
+  
+  if($('#test1').is(':checked')){ 
+    console.log("help me");
+  }
+ 
 </script>
 
 
