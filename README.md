@@ -60,7 +60,7 @@ x create users / users can drop in on other areas
 
 
 
-PLAN FOR FIXING BACKEND PROBLEM
+PLAN FOR FIXING BACKEND PROBLEM/ DEVISE PROBLEM
 - undo migrations.
 - create a new table for the attributes. 
 - connect attributes to users through another table.
