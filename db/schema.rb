@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 20171113183736) do
     t.string "name", default: "anonymous"
     t.string "area", default: "n/a"
     t.boolean "sober", default: true
+    t.string "first_name"
+    t.string "last_name", default: ""
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -17,9 +17,5 @@ class PagesController < ApplicationController
     def meetings
 
     end
-
-    def settings
-
-    end
     
 end

@@ -1,10 +1,13 @@
 <%= stylesheet_link_tag "edit" %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 <div class="container3">
-  <h1 class="editprofile">edit profile</h1>
-    <div class="row">
-    <form class="col s12">
+  <h1 class="editprofile">Edit Profile</h1>
+  <div class="row">
+    <div class="col s12">
+
       <div class="row">
-        <form action="#">
+      <%= js add_gritter(devise_error_messages!, title: "Pay attention!", sticky: true, :time => 1000) %>
+        <!-- <div>
           <div class="file-field input-field">
             <div class="btn">
               <span>File</span>
@@ -14,42 +17,64 @@
               <input class="file-path validate" type="text" placeholder="profile photo">
             </div>
           </div>
-        </form>
-  <form action="#">
-    <input class="datepicker btn" placeholder="Clean/Sobriety Date">
-  </form>
+        </div> -->
+        <div id="date">
+          <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
+      </div>
         <div class="input-field col s6">
-          <input id="first_name" type="text">
+          <%= f.text_field :first_name, id: "first_name" %>
           <label for="first_name">First</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text">
+          <%= f.text_field :last_name, id: "last_name" %>
           <label for="last_name">Last</label>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 
   <div class="cleanopt">
-    <form action="#">
+    <div >
       <p>
-        <input name="group1" type="radio" id="test1" />
+        <%= f.radio_button :sober, "true",  id: "test1"%>
         <label for="test1">Clean</label>
        
-        <input name="group1" type="radio" id="test2" />
-        <label for="test2">Sober</label>
+        <%= f.radio_button :sober, "false",  id: "test2"%>
+        <label for="test2">Working on it</label>
       </p>
-    </form>
+    </div>
+  </div>
+  <div class="input-field col s6">
+          <%= f.email_field :email, id: "email" %>
+          <label for="email">Email</label>
   </div>
 
   <div class="input-field col s6">
-          <input id="first_name" type="text">
-          <label for="home_group">Home Group</label>
+          <%= f.text_field :area, id: "area" %>
+          <label for="area">Home Group</label>
   </div>
   <div class="input-field col s6">
-    <%= link_to "Done", profile_path, class: "waves-effect waves-light btn" %> 
+          <%= f.password_field :current_password, id: "current_password" %>
+          <label for="current_password">Current Password</label>
   </div>
+  <div class="input-field col s6">
+          <%= f.password_field :password, id: "password" %>
+          
+          <label for="password">New Password</label>
+  </div>
+   <div class="input-field col s6">
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <label for="home_group">New Password Confirmation</label>
+  </div>
+  
+ 
+  
+    <%= f.submit "Done",  class: "waves-effect waves-light btn col s6" %> 
+  
+
 </div>
+
+<% end %>
 
 <script>
   $('.datepicker').pickadate({
@@ -60,6 +85,12 @@
     closeOnSelect: true,
     closeOnClear: true,
   });
+
+  
+  if ($('#test2').is(':checked')) { 
+    console.log("Help me");
+  }
+ 
 </script>
 
 

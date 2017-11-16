@@ -8,53 +8,98 @@
     </div>
     
     <div class="row">
-      <form class="col s12">
-          <div class="input-field col s12 block">
-          <textarea id="textbox" class="materialize-textarea" placeholder="Say something"></textarea>
-            
-          </div>
-      </form>
-    </div>
-    
-
-    <div class="boom">
+      <div class="col s12">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>JS Bin</title>
+        <form data-commentform="" style="margin-bottom: 20px;">
+          <textarea data-textbox=""></textarea>
+          <button  class="btn waves-effect waves-light" type="submit">Post</button>
+        </form>
+        <div data-comments="" class="comments"></div> 
+      </div>
+    </div>      
+          
+    <!-- <div class="boom">
       <button class="btn waves-effect waves-light" type="submit" name="action">Post
         <i class="material-icons right">send</i>
       </button>
-    </div>
-    <div class="commentsblock">
-  </div> 
-
+    </div> -->
+  </div>  
+   
   
 
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#textbox").val('');
-            $("#textbox").keypress(function () {
-                var textLength = $("#textbox").val().length;
-                if (textLength % 50 == 0) {
-                    var height = textLength / 50;
-                    $("#textbox").css('height', 20 + (height * 20));
-                }
-            });
-            $('#textbox').keydown(function (e) {
-                if (e.keyCode == 13) {
-                    var msg = $(this).val();
-                    if (msg == "") {
-                        alert('full the message');
-                    }
-                    else {
 
-                        $(".commentsblock").append(
-                        "<div class='comments'><div class='imageicons divfloat'><img src='https://cdn1.iconfinder.com/data/icons/black-easy/32/538647-user_32x32.png' /></div><div class='commentinfo divfloat'>" + msg + "</div></div>"
-                        ).fadeIn('slow');
-                        $("#textbox").val("");
-                    }
-                }
-            })
-        });
-    </script>
+
+
+
+<script>
+  
+const form = document.querySelector('[data-commentform]');
+const commentBox = document.querySelector('[data-comments]');
+const textBox = document.querySelector('[data-textbox]');
+
+const commentTemplate = comment => (
+`
+  <div class="card commentcard">
+    <div class="comment">
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Asap');
+      </style>
+      <p>${comment.value}</p>
+      <div class="utils">
+        <div data-like="${comment.id}">Like ${comment.likes}</div>
+        <div data-share="${comment.id}">Share</div>
+        <div data-comment="${comment.id}">Comment</div>
+      </div>
+    </div>
+  </div>
+
+  `
+);
+
+let comments = [];
+
+function renderComments() {
+  const markup = comments.sort((a, b) => b.id - a.id).map(comment => commentTemplate(comment)).join('');
+  commentBox.innerHTML = markup;
+}
+
+function addComment(comment) {
+  comments.push({
+    value: comment,
+    id: Date.now().toString(),
+    likes: 0,
+  });
+}
+
+function deleteComment(id) {
+  comments = comments.filter(({ id: currentID }) => currentID !== id);
+}
+
+function findById(id) {
+  return comments.find(({ id: commentID }) => commentID === id);
+}
+
+commentBox.addEventListener('click', e => {
+  if (e.target.dataset.like !== void 0) {
+    const id = e.target.dataset.like;
+    const comment = findById(id);
+    comment.likes += 1;
+    renderComments();
+  }
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  if (textBox.value.trim() !== '') {
+    addComment(textBox.value);
+    renderComments();
+    textBox.value = "";
+  }
+});
+
+</script>
   
 
 

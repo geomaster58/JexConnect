@@ -9,9 +9,7 @@ body {
 
 
 @keyframes bounceInDown {
-  from, 60%, 75%, 90%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
+  
 
   0% {
     opacity: 0;
@@ -26,14 +24,12 @@ body {
     transform: translate3d(0, -10px, 0);
   }
 
-  90% {
+  100% {
     opacity: 1;
     transform: translate3d(0, 5px, 0);
   }
 
-  to {
-    transform: none;
-  }
+  
 }
 
 .newbster {
@@ -57,11 +53,13 @@ body {
   margin-top: 35px;
   margin-bottom: auto;
   width: 60%;
-  
+  opacity: 0;
+  transform: translate3d(0, -3000px, 0);
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation: bounceInDown 1s forwards;
   background-color: black;
   border-radius: 2px;
   border: 2px solid white;
-  animation: bounceInDown 1s;
 }
 
 @media (max-width: 1000px) {
