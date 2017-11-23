@@ -81,6 +81,8 @@ function findById(id) {
   return comments.find(({ id: commentID }) => commentID === id);
 }
 
+
+
 commentBox.addEventListener('click', e => {
   if (e.target.dataset.like !== void 0) {
     const id = e.target.dataset.like;
