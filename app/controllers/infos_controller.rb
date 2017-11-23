@@ -44,7 +44,7 @@ class InfosController < ApplicationController
   private
 
   def set_info
-    @post = Info.find(params[:id])
+    @info = Info.find(params[:id])
   end
 
   def info_params
