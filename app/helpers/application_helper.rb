@@ -7,8 +7,21 @@ module ApplicationHelper
     else
       "0 years and 0 days"  
     end
+  end
 
+  def first_name user
+    user.infos.first.first_name
+  end
 
-    
+  def last_name user
+    user.infos.first.last_name
+  end
+
+  def area user
+    user.infos.first.area
+  end
+
+  def status user
+    user.infos.first.sobriety
   end
 end
