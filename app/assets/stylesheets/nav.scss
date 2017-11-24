@@ -2,5 +2,10 @@
  
  #search {
   width: 300px;
-  margin-right: 70px;
+  margin-right: 85px;
  }
+
+::placeholder {
+  color: white;
+  opacity: .2;
+}
