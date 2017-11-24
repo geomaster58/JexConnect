@@ -54,3 +54,15 @@ x create users / users can drop in on other areas
 - Google Adsense?
 - Users have many comments
 - Action Cable for comments
+
+
+
+
+
+
+PLAN FOR FIXING BACKEND PROBLEM/ DEVISE PROBLEM
+- undo migrations.
+- create a new table for the attributes. 
+- connect attributes to users through another table.
+- rework frontend to include this. 
+- use status enum for clean/sober/dosent wish to divulge
