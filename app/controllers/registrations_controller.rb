@@ -5,7 +5,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super do
-        resource.info = Info.new
+        arr = []
+        arr << Info.create!
+        resource.infos = arr
         resource.save
     end
   end
