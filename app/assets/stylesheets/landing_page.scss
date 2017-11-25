@@ -17,6 +17,16 @@
   text-align: center;
 }
 
+.arealocation {
+  font-size: 14px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: -15px;
+  text-decoration: underline;
+    }
+
 .profile-img {
   
   display: block;
@@ -84,68 +94,9 @@
   color: black;
 }
 
-/*textarea {
-  color: white;
-  outline: none;
-  background-color: black;
-  margin-top: -27px;
-
-}
-
-textarea {
-    resize: none;
-    height: 100px;
-}*/
-
 .boom {
   margin-top: 18px;
 }
-
-/*.block
-        {
-            width: 450px;
-            float: left;
-            border: 1px solid white;
-        }
-        
-        .comments
-        {
-            width: 400px;
-            float: left;
-            border: 1px solid white;
-            min-height: 40px;
-            border: 1px solid white;
-            margin-bottom: 10px;
-        }
-        .commentsblock
-        {    
-            margin-top: 25px;
-            width: 400px;
-            float: left;
-            
-        }
-        .commentbox
-        {
-            overflow-y: hidden;
-            height: 20px;
-            width: 400px;
-        }
-        .divfloat
-        {
-            float: left;
-        }
-        .imageicons
-        {
-            height: 40px;
-            width: 42px;
-        }
-        .commentinfo
-        {
-            background: black;
-            color: white;
-            word-wrap: break-word;
-            width: 352px;
-        }*/
 
 .comment {
   border: none;
