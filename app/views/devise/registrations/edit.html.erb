@@ -1,97 +1,18 @@
-<%= stylesheet_link_tag "edit" %>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-<div class="container3">
-  <h1 class="editprofile">Edit Profile</h1>
-  <div class="row">
-    <div class="col s12">
-      <div class="row">
-      <%= js add_gritter(devise_error_messages!, title: "Pay attention!", sticky: true, :time => 1000) %>
-        <!-- <div>
-          <div class="file-field input-field">
-            <div class="btn">
-              <span>File</span>
-              <input type="file" multiple>
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" placeholder="profile photo">
-            </div>
-          </div>
-        </div> -->
-        <div id="date">
-          <%= f.date_field :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
-      </div>
-        <div class="input-field col s6">
-          <%= f.text_field :first_name, id: "first_name" %>
-          <label for="first_name">First</label>
-        </div>
-        <div class="input-field col s6">
-          <%= f.text_field :last_name, id: "last_name" %>
-          <label for="last_name">Last</label>
-        </div>
-      </div>
-    </div>
-  </div>
+<%= stylesheet_link_tag "register_page" %>
+<h1 class="flux newbster">Edit Login</h1>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-  <div class="cleanopt">
-    <div >
-      <p>
-        <%= f.radio_button :sober, "true",  id: "test1"%>
-        <label for="test1">Clean</label>
-       
-        <%= f.radio_button :sober, "false",  id: "test2"%>
-        <label for="test2">Working on it</label>
-      </p>
-    </div>
-  </div>
-  <div class="input-field col s6">
-          <%= f.email_field :email, id: "email" %>
-          <label for="email">Email</label>
-  </div>
+  <div class="field"> 
+    <%= f.email_field :email, autofocus: true, class: "input-field", placeholder: 'Email' %>
 
-  <div class="input-field col s6">
-          <%= f.text_field :area, id: "area" %>
-          <label for="area">Home Group</label>
+    <%= f.password_field :password, autocomplete: "off", class: "input-field", placeholder: 'Password' %>
+    
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "input-field", placeholder: 'Confirm password' %>
+    
+    <%= f.submit "Sign Up", class: "login-btn" %>
   </div>
-  <div class="input-field col s6">
-          <%= f.password_field :current_password, id: "current_password" %>
-          <label for="current_password">Current Password</label>
-  </div>
-  <div class="input-field col s6">
-          <%= f.password_field :password, id: "password" %>
-          
-          <label for="password">New Password</label>
-  </div>
-   <div class="input-field col s6">
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          <label for="home_group">New Password Confirmation</label>
-  </div>
-  
- 
-  
-    <%= f.submit "Done",  class: "waves-effect waves-light btn col s6" %> 
-  
-
-</div>
 
 <% end %>
 
-<script>
-  $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 64, // Creates a dropdown of 15 years to control year,
-    min: new Date(1953,9,14),
-    max: true,
-    closeOnSelect: true,
-    closeOnClear: true,
-  });
-
-  
-  if ($('#test2').is(':checked')) { 
-    console.log("Help me");
-  }
- 
-</script>
-
-
-
-
+<%= render "devise/shared/links" %>
