@@ -6,7 +6,7 @@
     <%= link_to "edit", edit_user_registration_path, class: "material-icons edit-button" %>
   
 
-  <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img">
+  <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img" style="width:4.5em; height:4.5em">
   <div class="profile-text">
     <div class="cleandate">
       <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
@@ -24,7 +24,96 @@
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row">
+      <div class="col s12">
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>JS Bin</title>
+        <form data-commentform="" style="margin-bottom: 20px;">
+          <textarea data-textbox=""></textarea>
+          <button  class="btn waves-effect waves-light" type="submit">Post</button>
+        </form>
+        <div data-comments="" class="comments"></div> 
+      </div>
+    </div>      
+  </div>  
+</div>  
+<script>
+var request = new XMLHttpRequest ();
+const form = document.querySelector('[data-commentform]');
+const commentBox = document.querySelector('[data-comments]');
+const textBox = document.querySelector('[data-textbox]');
+
+const commentTemplate = comment => (
+`
+  <div class="card commentcard">
+    <div class="comment">
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Asap');
+      </style>
+      <p>${comment.value}</p>
+      <div class="utils">
+        <div data-like="${comment.id}">Like ${comment.likes}</div>
+        <div data-share="${comment.id}">Share</div>
+        <div data-comment="${comment.id}">Comment</div>
+      </div>
+    </div>
+  </div>
+
+  `
+);
+
+let comments = [];
+
+function renderComments() {
+  const markup = comments.sort((a, b) => b.id - a.id).map(comment => commentTemplate(comment)).join('');
+  commentBox.innerHTML = markup;
+}
+
+function addComment(comment) {
+  comments.push({
+    value: comment,
+    id: Date.now().toString(),
+    likes: 0,
+  });
+}
+
+function deleteComment(id) {
+  comments = comments.filter(({ id: currentID }) => currentID !== id);
+}
+
+function findById(id) {
+  return comments.find(({ id: commentID }) => commentID === id);
+}
+
+
+
+commentBox.addEventListener('click', e => {
+  if (e.target.dataset.like !== void 0) {
+    const id = e.target.dataset.like;
+    const comment = findById(id);
+    comment.likes += 1;
+    renderComments();
+  }
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  if (textBox.value.trim() !== '') {
+    addComment(textBox.value);
+    renderComments();
+    textBox.value = "";
+  }
+});
+
+</script>
+  
+
+
+
+
 
 
 
