@@ -55,4 +55,4 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'materialize-sass', '~> 0.100.2'
 gem 'material_icons', '~> 2.2', '>= 2.2.1'
 gem 'redis', '~> 4.0', '>= 4.0.1'
-
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'
