@@ -2,7 +2,7 @@
 <%= stylesheet_link_tag "profile" %>
 
 <div class="card">
-  <%= link_to "edit", edit_user_registration_path, class: "material-icons edit-button" %>
+  <%= link_to "edit",  controller: "infos", action: "edit", id: current_user.infos.first.id, class: "material-icons edit-button" %>
   <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img">
   <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
     <div class="profile-text">

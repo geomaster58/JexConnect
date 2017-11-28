@@ -3,26 +3,8 @@ class InfosController < ApplicationController
   before_action :set_info, only: [ :edit, :update]
   
 
-  def new
-    if current_user.infos.count == 1
-      redirect_to edit_post_path
-    else  
-      @info = Info.new
-    end  
-  end
-
-  def create
-    @info = Info.new(info_params)
-    @info.user_id = current_user.id
-    if @info.save
-      redirect_to posts_path, notice: 'Your post was created successfully'
-     else
-     render :new  
-   end
-  end
-
   def show
-
+    redirect_to root_path
   end
 
   def edit
@@ -38,7 +20,7 @@ class InfosController < ApplicationController
 
   def destroy
     @info.delete
-    redirect_to posts_path, notice: "Your post was deleted"
+    redirect_to root_path, notice: "Your post was deleted"
   end
 
   private
@@ -48,7 +30,7 @@ class InfosController < ApplicationController
   end
 
   def info_params
-    params.require(:info).permit(:area, :first_name, :last_name, )
+    params.require(:info).permit(:area, :first_name, :last_name, :sobriety, :start_date, :picture)
   end
 
 end

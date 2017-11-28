@@ -1,0 +1,80 @@
+
+<%= form_for @info do |f| %>
+<div class="container3">
+  <h1 class="editprofile">Edit Profile</h1>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+      
+         <div>
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="profile photo">
+            </div>
+          </div>
+        </div> 
+         <div id="date">
+           <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
+      </div>
+        <div class="input-field col s6">
+          <%= f.text_field  :first_name, id: "first_name" %>
+          <label for="first_name">First</label>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :last_name, id: "last_name" %>
+          <label for="last_name">Last</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cleanopt">
+    <div >
+      <p>
+        <%= f.radio_button :sobriety, "true",  id: "test1"%>
+        <label for="test1">Clean</label>
+       
+        <%= f.radio_button :sobriety, "false",  id: "test2"%>
+        <label for="test2">Working on it</label>
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="input-field col s6">
+          <%= f.text_field :area, id: "area" %>
+          <label for="area">Home Group</label>
+  </div>
+  
+  
+   
+  
+ 
+  
+    <%= f.submit "Done",  class: "waves-effect waves-light btn col s6" %> 
+  
+
+</div>
+
+<% end %>
+
+<script>
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 64, // Creates a dropdown of 15 years to control year,
+    min: new Date(1953,9,14),
+    max: true,
+    closeOnSelect: true,
+    closeOnClear: true,
+  });
+
+  
+  if ($('#test2').is(':checked')) { 
+    console.log("Help me");
+  }
+ 
+</script> 
