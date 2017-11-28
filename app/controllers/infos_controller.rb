@@ -26,7 +26,7 @@ class InfosController < ApplicationController
   private
 
   def set_info
-    @info = Info.find(params[:id])
+    @info = Info.friendly.find(params[:id])
   end
 
   def info_params
