@@ -1,4 +1,4 @@
-
+<%= stylesheet_link_tag "edit" %>
 <%= form_for @info do |f| %>
 <div class="container3">
   <h1 class="editprofile">Edit Profile</h1>
@@ -35,11 +35,14 @@
   <div class="cleanopt">
     <div >
       <p>
-        <%= f.radio_button :sobriety, "true",  id: "test1"%>
+        <%= f.radio_button :sobriety, :clean,  id: "test1"%>
         <label for="test1">Clean</label>
+
+        <%= f.radio_button :sobriety, :sober,  id: "test3"%>
+        <label for="test3">Sober</label>
        
-        <%= f.radio_button :sobriety, "false",  id: "test2"%>
-        <label for="test2">Working on it</label>
+        <%= f.radio_button :sobriety, :not_specified,  id: "test2"%>
+        <label for="test2">Dont wish to disclose</label>
       </p>
     </div>
   </div>
@@ -47,7 +50,7 @@
 
   <div class="input-field col s6">
           <%= f.text_field :area, id: "area" %>
-          <label for="area">Home Group</label>
+          <label for="area">County</label>
   </div>
   
   
@@ -73,8 +76,6 @@
   });
 
   
-  if ($('#test2').is(':checked')) { 
-    console.log("Help me");
-  }
+  
  
 </script> 

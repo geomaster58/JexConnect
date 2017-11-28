@@ -12,7 +12,7 @@ class InfosController < ApplicationController
 
   def update
     if @info.update(info_params)
-      redirect_to @info, notice: 'Your post was updated successfully'
+      redirect_to @info, notice: 'Your info was updated successfully'
     else
       render :edit
     end
