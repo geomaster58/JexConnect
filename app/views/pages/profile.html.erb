@@ -3,23 +3,29 @@
 
 <div class="card">
   
-    <%= link_to "edit", edit_user_registration_path, class: "material-icons edit-button" %>
   
+    <%= link_to "edit", edit_user_registration_path, class: "material-icons edit-button" %>
 
   <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img" style="width:4.5em; height:4.5em">
   <div class="profile-text">
     <div class="cleandate">
+      <div class="name">
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin');
+        </style>
+        <%= first_name current_user %> 
+        <%= last_name current_user %>
+      </div>
       <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
 
       <div class="datecolor">
         <style>
         @import url('https://fonts.googleapis.com/css?family=Rasa');
         </style>
+        
         <%= time_dif current_user %>
-        <%= first_name current_user %> 
-        <%= last_name current_user %>
         <div class="datecolor">
-          <%= area current_user %> Message of Hope, Promise of freedom
+          <%= area current_user %> Clean!
         </div>
       </div>
     </div>
