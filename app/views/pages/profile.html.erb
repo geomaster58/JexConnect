@@ -7,7 +7,7 @@
   <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
     <div class="profile-text">
       <div class="datecolor">
-        <%= time_dif current_user %>
+        <%= time_dif current_user %> <br> <%= status  current_user %>
       </div>
       
       <h1 class="profile-name"><%= first_name current_user %> <%= last_name current_user %></h1>
