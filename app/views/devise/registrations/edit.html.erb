@@ -1,5 +1,5 @@
 <%= render "shared/navbar" %>
-<%= stylesheet_link_tag "edit" %>
+<%= stylesheet_link_tag "settings" %>
 
 <div class="container5">
   <h1 class="flux newbster">Settings</h1>
@@ -16,7 +16,7 @@
     <%= f.password_field :current_password, autocomplete: "off", class: "input-field", placeholder: 'Current Password' %>
     
     <div class="input-field col s12">
-      <%= link_to "Save", profile_path, class: "waves-effect waves-light btn" %> 
+      <%= f.submit "Save", class: "waves-effect waves-light btn" %> 
     </div>
   </div>
 </div>

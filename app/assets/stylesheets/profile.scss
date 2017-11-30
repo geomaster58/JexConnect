@@ -27,14 +27,35 @@
   height: 4.5em;
   width: 4.5em;
   border-radius: 100%;
-  
+}
+
+.name {
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  margin-top: -15px;
+  color: black;
+}
+
+hr {
+  margin-top: -1px;
 }
 
 .cleandate {
   color: black;
-  margin-top: -15px;
   font-family: 'Rasa', serif;
   font-size: 1.1em;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-top: 2px
+}
+
+.counter {
+  color: black;
+  margin-top: 3px;
+}
+
+.area {
+  color: black;
 }
 
 .profile-text {
@@ -44,16 +65,8 @@
   background-color: rgb(174, 174, 175);
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1)
-
 }
 
-.name {
-  font-size: 20px;
-  font-family: 'Cabin', sans-serif;
-  text-transform: uppercase;
-
-
-}
 
 .comment {
   border: none;
@@ -139,7 +152,8 @@ textarea{
   }
 }
 
-.edit-button {
-    color: darkgrey;
+a {
+  color: darkgrey;
 }
+
 

@@ -1,0 +1,63 @@
+<%= stylesheet_link_tag "edit" %>
+<%= render "shared/navbar" %>
+<%= form_for @info do |f| %>
+
+  <h1 class="editprofile field">Edit Profile</h1>
+<div class="container2">
+  <div class="file-field field">
+    <div class="btn">
+      <span>File</span>
+      <input type="file" multiple>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder="profile photo">
+    </div>
+  </div>
+
+  <div class="row field">
+    <div class="input-field field col s6">
+      <%= f.text_field  :first_name, id: "first_name" %>
+      <label for="first_name">First</label>
+    </div>
+
+    <div class="input-field field col s6">
+      <%= f.text_field :last_name, id: "last_name" %>
+      <label for="last_name">Last</label>
+    </div>
+    <div class="field">
+      <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.radio_button :sobriety, :clean,  id: "test1"%>
+    <label for="test1">Clean</label>
+    <%= f.radio_button :sobriety, :sober,  id: "test3"%>
+    <label for="test3">Sober</label>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :area, id: "area" %>
+    <label for="area">County</label>
+  </div>
+  <div class="input-field col s12"> 
+    <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
+  </div>
+</div>
+
+
+<% end %>
+
+<script>
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 64, // Creates a dropdown of 15 years to control year,
+    min: new Date(1953,9,14),
+    max: true,
+    closeOnSelect: true,
+    closeOnClear: true,
+  });
+
+  
+  
+
+</script> 
