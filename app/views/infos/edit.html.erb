@@ -2,15 +2,35 @@
 <%= render "shared/navbar" %>
 <%= form_for @info do |f| %>
 
-  <h1 class="editprofile field">Edit Profile</h1>
-<div class="container2">
-  <div class="file-field field">
-    <div class="btn">
-      <span>File</span>
-      <input type="file" multiple>
-    </div>
-    <div class="file-path-wrapper">
-      <input class="file-path validate" type="text" placeholder="profile photo">
+<div class="container3">
+  <h1 class="editprofile">Edit Profile</h1>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+      
+         <div>
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <%= f.file_field :picture %>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="profile photo">
+            </div>
+          </div>
+        </div> 
+         <div id="date">
+           <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
+      </div>
+        <div class="input-field col s6">
+          <%= f.text_field  :first_name, id: "first_name" %>
+          <label for="first_name">First</label>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :last_name, id: "last_name" %>
+          <label for="last_name">Last</label>
+        </div>
+      </div>
     </div>
   </div>
 

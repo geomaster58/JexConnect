@@ -42,6 +42,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'xray-rails', '~> 0.3.1'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -56,3 +57,6 @@ gem 'materialize-sass', '~> 0.100.2'
 gem 'material_icons', '~> 2.2', '>= 2.2.1'
 gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'mini_magick', '~> 4.8'
