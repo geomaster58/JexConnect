@@ -6,13 +6,23 @@
 
  #search {
   width: 300px;
-  margin-right: 155px;
   margin-top: 5px;
   color: white;
-  border-bottom: 300px;
+  border-style: none;
   padding-top: 0px;
   position: center;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 0 1px 0 0 black;
+  -moz-box-shadow: 0 1px 0 0 black;
+  box-shadow: 0 1px 0 0 black;
+  justify-content: space-between
 }
+
+.searchbar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 ::placeholder {
   color: white;
