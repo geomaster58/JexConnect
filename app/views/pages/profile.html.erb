@@ -3,7 +3,7 @@
 
 <div class="card">
   <p class="material-icons edit-button"><%= link_to "edit", controller: "infos", action: "edit", id: current_user.infos.first.id  %></p>
-  <%= image_tag info_img(current_user.infos.first.picture), width: '100%' %>
+  <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img", :crop => :fill %>
   <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
     <div class="profile-text">
       <div class="datecolor">
