@@ -5,14 +5,12 @@
  <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes">
 
- <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= stylesheet_link_tag    'application', 'croppie', media: 'all', 'data-turbolinks-track': 'reload' %>
  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-  <%= js add_gritter(flash[:notice],  :title => "Pay attention!", :sticky => false, :time => 1000) %>
-  <%= js add_gritter(flash[:alert],  :title => "Pay attention!", :sticky => false, :time => 1000) %>
-  <%= js add_gritter(flash[:error], title: "Pay attention!", sticky: false, :time => 1000) %>
+  
   <%= yield %>
   
 </body>

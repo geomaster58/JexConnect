@@ -1,5 +1,7 @@
 {
   "name": "JexConnect",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "croppie": "^2.5.1"
+  }
 }

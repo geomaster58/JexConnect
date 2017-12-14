@@ -20,13 +20,16 @@
 .profile-img {
   z-index: 100;
   display: block;
-  height: 7em;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
   height: 6em;
   width: 6em;
   border-radius: 100%;
+  image-rendering: pixelated;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  object-fit: cover;
 }
 
 .name {
