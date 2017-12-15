@@ -1,6 +1,2 @@
-<p class="text-white"><%= @user.email %></p>
-<p class="text-white"><%= @user.sober %></p> 
-<p class="text-white"><%= @user.first_name %></p>
-<p class="text-white"><%= @user.last_name %></p>
-<p class="text-white"><%= @user.area %></p>
-<p class="text-white"><%= @user.posts%></p>
+<p style="color: white;"><%= first_name @user %></p>
+<p style="color: white;"><%= link_to "Connect", controller: "users_connect", action: "create", id: @user %></p>
