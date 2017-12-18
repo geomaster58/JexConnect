@@ -1,44 +1,62 @@
+<link rel="stylesheet" href="croppie.css" />
+<script src="croppie.js"></script>
 <%= stylesheet_link_tag "edit" %>
-<%= javascript_include_tag "croppie.min.js" %>
+
 <%= render "shared/navbar" %>
 <%= form_for @info do |f| %>
 
 <h1 class="editprofile field">Edit Profile</h1>
-  <div class="container2">
-    <label>Profile Picture:</label><br/>
-    <div class="preview my-image profile-img"</div>
-    <canvas id="imageCanvas"></canvas>
+<div class="container2">
+
+  <label>Profile Picture:</label><br/>
+  
+
+  <div id="main-cropper"></div>
+  <a class="button actionUpload">
+    <span>Upload</span>
+    <input type="file" id="upload" value="Choose Image" accept="image/*">
+  </a>
+  
+  <%= f.file_field :picture %>
+  
+
+</div>
+</body>
+</html>
+
+
+<canvas id="imageCanvas"></canvas>
+</div>
+
+
+<div class="row field">
+  <div class="input-field field col s6">
+    <%= f.text_field  :first_name, id: "first_name" %>
+    <label for="first_name">First</label>
   </div>
-      <%= f.file_field :picture, id: "imageLoader" %>
 
-  <div class="row field">
-    <div class="input-field field col s6">
-      <%= f.text_field  :first_name, id: "first_name" %>
-      <label for="first_name">First</label>
-    </div>
-
-    <div class="input-field field col s6">
-      <%= f.text_field :last_name, id: "last_name" %>
-      <label for="last_name">Last</label>
-    </div>
-    <div class="field">
-      <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
-    </div>
+  <div class="input-field field col s6">
+    <%= f.text_field :last_name, id: "last_name" %>
+    <label for="last_name">Last</label>
   </div>
   <div class="field">
-    <%= f.radio_button :sobriety, :clean,  id: "test1"%>
-    <label for="test1">Clean</label>
-    <%= f.radio_button :sobriety, :sober,  id: "test3"%>
-    <label for="test3">Sober</label>
+    <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
   </div>
+</div>
+<div class="field">
+  <%= f.radio_button :sobriety, :clean,  id: "test1"%>
+  <label for="test1">Clean</label>
+  <%= f.radio_button :sobriety, :sober,  id: "test3"%>
+  <label for="test3">Sober</label>
+</div>
 
-  <div class="field">
-    <%= f.text_field :area, id: "area" %>
-    <label for="area">County</label>
-  </div>
-  <div class="input-field col s12"> 
-    <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
-  </div>
+<div class="field">
+  <%= f.text_field :area, id: "area" %>
+  <label for="area">County</label>
+</div>
+<div class="input-field col s12"> 
+  <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
+</div>
 </div>
 
 <% end %>
@@ -58,27 +76,37 @@
 
 <script>
 
-var imageLoader = document.getElementById('imageLoader');
-    imageLoader.addEventListener('change', handleImage, false);
-var canvas = document.getElementById('imageCanvas');
-var ctx = canvas.getContext('2d');
-$('.my-image').croppie();
+  var basic = $('#main-cropper').croppie({
+    viewport: { width: 250, height: 250 },
+    boundary: { width: 300, height: 300 },
+    showZoomer: false,
+    url: 'http://lorempixel.com/500/400/'
+  });
 
+  function readFile(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
 
-function handleImage(e){
-    var reader = new FileReader();
-    reader.onload = function(event){
-        var img = new Image();
-        img.onload = function(){
-            canvas.width = img.width;
-            canvas.height = img.height;
-            ctx.drawImage(img, 0, 0, 100, 150);
-        }
-        img.src = event.target.result;
+      reader.onload = function (e) {
+        $('#main-cropper').croppie('bind', {
+          url: e.target.result
+        });
+        $('.actionDone').toggle();
+        $('.actionUpload').toggle();
+      }
+
+      reader.readAsDataURL(input.files[0]);
     }
-    reader.readAsDataURL(e.target.files[0]);     
-}
+  }
+
+  $('.actionUpload input').on('change', function () { readFile(this); });
+  $('.actionDone').on('click', function(){
+    $('.actionDone').toggle();
+    $('.actionUpload').toggle();
+  })
 </script>
+
+
 
 
 
