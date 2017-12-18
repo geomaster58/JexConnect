@@ -1,66 +1,62 @@
+<link rel="stylesheet" href="croppie.css" />
+<script src="croppie.js"></script>
 <%= stylesheet_link_tag "edit" %>
+
+<%= render "shared/navbar" %>
 <%= form_for @info do |f| %>
-<div class="container3">
-  <h1 class="editprofile">Edit Profile Info</h1>
-  <div class="row">
-    <div class="col s12">
-      <div class="row">
-      
-         <div>
-          <div class="file-field input-field">
-            <div class="btn">
-              <span>File</span>
-              <%= f.file_field :picture %>
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" placeholder="profile photo">
-            </div>
-          </div>
-        </div> 
-         <div id="date">
-           <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
-      </div>
-        <div class="input-field col s6">
-          <%= f.text_field  :first_name, id: "first_name" %>
-          <label for="first_name">First</label>
-        </div>
-        <div class="input-field col s6">
-          <%= f.text_field :last_name, id: "last_name" %>
-          <label for="last_name">Last</label>
-        </div>
-      </div>
-    </div>
+
+<h1 class="editprofile field">Edit Profile</h1>
+<div class="container2">
+
+  <label>Profile Picture:</label><br/>
+  
+
+  <div id="main-cropper"></div>
+  <a class="button actionUpload">
+    <span>Upload</span>
+    <input type="file" id="upload" value="Choose Image" accept="image/*">
+  </a>
+  
+  <%= f.file_field :picture %>
+  
+
+</div>
+</body>
+</html>
+
+
+<canvas id="imageCanvas"></canvas>
+</div>
+
+
+<div class="row field">
+  <div class="input-field field col s6">
+    <%= f.text_field  :first_name, id: "first_name" %>
+    <label for="first_name">First</label>
   </div>
 
-  <div class="cleanopt">
-    <div >
-      <p>
-        <%= f.radio_button :sobriety, :clean,  id: "test1"%>
-        <label for="test1">Clean</label>
-
-        <%= f.radio_button :sobriety, :sober,  id: "test3"%>
-        <label for="test3">Sober</label>
-       
-        <%= f.radio_button :sobriety, :not_specified,  id: "test2"%>
-        <label for="test2">Dont wish to disclose</label>
-      </p>
-    </div>
+  <div class="input-field field col s6">
+    <%= f.text_field :last_name, id: "last_name" %>
+    <label for="last_name">Last</label>
   </div>
-  
-
-  <div class="input-field col s6">
-          <%= f.text_field :area, id: "area" %>
-          <label for="area">County</label>
+  <div class="field">
+    <%= f.date_field  :start_date, class: "datepicker btn", placeholder: "Clean/Sobriety Date"%>
   </div>
-  
-  
-   
-  
- 
-  
-    <%= f.submit "Done",  class: "waves-effect waves-light btn col s6" %> 
-  
+</div>
+<div class="field">
+  <%= f.radio_button :sobriety, :clean,  id: "test1"%>
+  <label for="test1">Clean</label>
+  <%= f.radio_button :sobriety, :sober,  id: "test3"%>
+  <label for="test3">Sober</label>
+</div>
 
+<div class="field">
+  <%= f.text_field :area, id: "area" %>
+  <label for="area">County</label>
+</div>
+<div class="input-field col s12"> 
+  <%= f.submit "Done",  class: "waves-effect waves-light btn" %> 
+</div>
 </div>
 
 <% end %>
@@ -74,8 +70,53 @@
     closeOnSelect: true,
     closeOnClear: true,
   });
-
   
   
- 
 </script> 
+
+<script>
+
+  var basic = $('#main-cropper').croppie({
+    viewport: {
+        width: 200,
+        height: 200,
+        showZoomer: false,
+        type: 'circle'
+
+    },
+    boundary: {
+        showZoomer: false,
+        width: 300,
+        height: 300
+    }
+});
+
+  function readFile(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#main-cropper').croppie('bind', {
+          url: e.target.result
+        });
+        $('.actionDone').toggle();
+        $('.actionUpload').toggle();
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $('.actionUpload input').on('change', function () { readFile(this); });
+  $('.actionDone').on('click', function(){
+    $('.actionDone').toggle();
+    $('.actionUpload').toggle();
+  })
+
+
+</script>
+
+
+
+
+

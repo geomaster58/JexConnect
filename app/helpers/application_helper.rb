@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def status user
-    user.infos.first.sobriety.nil? ? "" : user.infos.first.sobriety.capitalize
+    user.infos.first.sobriety.nil? ? "" : user.infos.first.sobriety.capitalize + "!"
   end
 
   def start_date user

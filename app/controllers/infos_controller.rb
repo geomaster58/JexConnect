@@ -4,7 +4,7 @@ class InfosController < ApplicationController
   
 
   def show
-    redirect_to root_path
+    redirect_to profile_path
   end
 
   def edit

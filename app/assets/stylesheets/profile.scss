@@ -4,12 +4,12 @@
 
 .card {
   max-width: 30em;
-  height: 400px;
+  height: 290px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: -10px;
   padding: 2em;
-  background-color: rgb(17, 17, 17);
+  background-color: black;
   color: #444;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -20,40 +20,115 @@
 .profile-img {
   z-index: 100;
   display: block;
-  height: 7em;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  height: 4.5em;
-  width: 4.5em;
+
+  height: 6em;
+  width: 6em;
   border-radius: 100%;
+  image-rendering: pixelated;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  margin-top: -15px;
+  color: black;
+}
+
+hr {
+  margin-top: 0px;
+  border-color: rgb(219, 219, 219);
+}
+
+.cleandate {
+  color: black;
+  font-family: 'Rasa', serif;
+  font-size: 1.1em;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-top: 2px
+}
+
+.counter {
+  color: black;
+  margin-top: 3px;
+}
+
+.area {
+  color: black;
+  margin-top: 4px;
+
 }
 
 .profile-text {
-  margin-top: -3.5em;
-  padding: 5em 1.5em 1.5em 1.5em; 
-  background-color: rgb(61, 60, 60);
+  height: 200px;
+  margin-top: -2.5em;
+  padding: 4em 1.5em 1.5em 1.5em; 
+  background-color: rgb(174, 174, 175);
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1)
 }
 
-.datecolor {
+
+.comment {
+  border: none;
+  padding: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  color: black;
+  background-color: white;
+  text-align: left;
+  width: 100%;
+  font-family: 'Asap', sans-serif;
+
+}
+
+.commentcard {
+  background-color: rgb(232, 234, 237);
+  margin-top: -1px;
+}
+
+p {
+  margin: 0 0 15px;
+  border-bottom: 1px solid #e8e8e8;
+  width: 100%;
+  margin-top: 15px;
+
+}
+
+.utils {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+textarea{
+  width: 100%;
+  height: 120px;
+  resize: none;
+  outline: none;
+  border-color: white;
   color: white;
+  background-color: black;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  margin-top: -70px;
+  font-family: 'Asap', sans-serif;
 }
 
-.profile-name{
-  margin-right: -1em;
-  margin-bottom: .75em;
-  margin-left: -1em;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding-bottom: .75em;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  color: rgb(0, 0, 0);
-}
-
-.profile-title {
-  color: #ccc;
+.btn {
+  margin-top: 15px;
 }
 
 .nav-wrapper {
@@ -68,6 +143,7 @@
 
 .profile-title {
   color: grey;
+  margin-bottom: -100px;
 }
 
 @media (max-width: 850px) {
@@ -83,6 +159,8 @@
   }
 }
 
-.edit-button {
+a {
   color: darkgrey;
 }
+
+

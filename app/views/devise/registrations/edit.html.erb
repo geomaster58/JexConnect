@@ -1,5 +1,8 @@
-<%= stylesheet_link_tag "edit" %>
-<h1 class="flux newbster">Edit Login</h1>
+<%= render "shared/navbar" %>
+<%= stylesheet_link_tag "settings" %>
+
+<div class="container5">
+  <h1 class="flux newbster">Settings</h1>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -12,8 +15,11 @@
 
     <%= f.password_field :current_password, autocomplete: "off", class: "input-field", placeholder: 'Current Password' %>
     
-    <%= f.submit "Update", class: "login-btn" %>
+    <div class="input-field col s12">
+      <%= f.submit "Save", class: "waves-effect waves-light btn" %> 
+    </div>
   </div>
+</div>
 
 <% end %>
 

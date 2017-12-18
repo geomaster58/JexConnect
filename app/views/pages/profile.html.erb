@@ -2,16 +2,126 @@
 <%= stylesheet_link_tag "profile" %>
 
 <div class="card">
-  <p class="material-icons edit-button"><%= link_to "edit", controller: "infos", action: "edit", id: current_user.infos.first.id  %></p>
-  <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img", :crop => :fill %>
-  <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %>
-    <div class="profile-text">
-      <div class="datecolor">
-        <%= time_dif current_user %> <br> <%= status  current_user %>
-      </div>
-      
-      <h1 class="profile-name"><%= first_name current_user %> <%= last_name current_user %></h1>
-        <span class="profile-title"><b><%= area current_user %></b> Message of Hope, Promise of freedom</span>
+
+  <div class="material-icons">
+    <%= link_to "edit", controller: "infos", action: "edit", id: current_user.infos.first.id %>
+  </div>
+
+  <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img" %>
+  
+  <div class="profile-text">
+    <div class="name">
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin');
+      </style>
+      <%= first_name current_user %> 
+      <%= last_name current_user %>
+      <hr>
     </div>
-</div>
+    <div class="cleandate">
+      <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %> 
+    </div>
+    <div class="counter">
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+        </style>
+        <%= time_dif current_user %> <%= status current_user %>
+    </div>
+    <div class="area">
+          <%= area current_user %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>JS Bin</title>
+      <form data-commentform="" style="margin-bottom: 20px;">
+        <textarea data-textbox=""></textarea>
+        <button  class="btn waves-effect waves-light" type="submit">Post</button>
+      </form>
+      <div data-comments="" class="comments"></div> 
+    </div>
+  </div>      
+</div>  
+  
+<script>
+  var request = new XMLHttpRequest ();
+  const form = document.querySelector('[data-commentform]');
+  const commentBox = document.querySelector('[data-comments]');
+  const textBox = document.querySelector('[data-textbox]');
+
+  const commentTemplate = comment => (
+    `
+    <div class="card commentcard">
+      <div class="comment">
+        <style>
+          @import url('https://fonts.googleapis.com/css?family=Asap');
+        </style>
+        <p>${comment.value}</p>
+        <div class="utils">
+          <div data-like="${comment.id}">Like ${comment.likes}</div>
+          <div data-share="${comment.id}">Share</div>
+          <div data-comment="${comment.id}">Comment</div>
+        </div>
+
+      </div>
+    </div>
+
+    `
+    );
+
+  let comments = [];
+
+  function renderComments() {
+    const markup = comments.sort((a, b) => b.id - a.id).map(comment => commentTemplate(comment)).join('');
+    commentBox.innerHTML = markup;
+  }
+
+  function addComment(comment) {
+    comments.push({
+      value: comment,
+      id: Date.now().toString(),
+      likes: 0,
+    });
+  }
+
+  function deleteComment(id) {
+    comments = comments.filter(({ id: currentID }) => currentID !== id);
+  }
+
+  function findById(id) {
+    return comments.find(({ id: commentID }) => commentID === id);
+  }
+
+
+
+  commentBox.addEventListener('click', e => {
+    if (e.target.dataset.like !== void 0) {
+      const id = e.target.dataset.like;
+      const comment = findById(id);
+      comment.likes += 1;
+      renderComments();
+    }
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (textBox.value.trim() !== '') {
+      addComment(textBox.value);
+      renderComments();
+      textBox.value = "";
+    }
+  });
+
+</script>
+
+
+
+
+
+
+
 

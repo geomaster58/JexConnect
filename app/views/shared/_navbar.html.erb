@@ -1,27 +1,48 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<%= stylesheet_link_tag "nav" %>
 <nav>
-    <div class="nav-wrapper">
-      <%= link_to "JEX", landing_page_path, class: "jexlogo" %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><%= link_to "Home", landing_page_path %></li>
-        <li><%= link_to "Profile", profile_path %></li>
-        <li><%= link_to "Area", area_path %></li>
-        <li><%= link_to "Meetings", meetings_path %></li>
-        <li><%= link_to "settings", edit_user_registration_path, class: "large material-icons" %></i></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
+      <div class="nav-wrapper">
+    <%= link_to "JEX", root_path, class: "jexlogo" %>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    
+    <input class="searchbar flex space-between" id="search" type="search" placeholder="Search..."></input>
+    
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Profile", profile_path %></li>
+      <li><%= link_to "Area", area_path %></li>
+      <li><%= link_to "Meetings", meetings_path %></li>
+      
+      <li><%= link_to "group", connections_path, class: "large material-icons connecticon" %></i></li>
 
-        <li><%= link_to "Profile", profile_path %></li>
-        <li><%= link_to "Area", area_path %></li>
-        <li><%= link_to "Meetings", meetings_path %></li>
-        <li><%= link_to "Settings", edit_user_registration_path %></li>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><%= link_to "Settings", edit_user_registration_path %></i></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete,   class: "alert" %></li>
+      </ul>
+      
+      <ul class="right hide-on-med-and-down">
+
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
-  </nav>
+  </ul>
+
+  <ul class="side-nav" id="mobile-demo">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Profile", profile_path %></li>
+    <li><%= link_to "Area", area_path %></li>
+    <li><%= link_to "Meetings", meetings_path %></li>
+    <li><%= link_to "Connections", connections_path %></li>
+    <li><%= link_to "Settings", edit_user_registration_path %></i></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete,   class: "alert" %></li>
+  </ul>
+</div>
+</nav>
 
 
+<script>
+  $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
+</script>
 
-  <script>
-    $(".button-collapse").sideNav();
-  </script>

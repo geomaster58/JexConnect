@@ -1,0 +1,43 @@
+@import "materialize";
+
+.nav-wrapper {
+  background-color: black;
+}
+
+.jexlogo {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: -60px;
+}
+
+.card {
+  max-width: 60em;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  padding: 2em;
+  background-color: rgb(17, 17, 17);
+  color: #444;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  body:after {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    width: 92%;
+    margin-left: 16px;
+  }
+}
+
+.flux {
+  font-size: 35px;
+}
