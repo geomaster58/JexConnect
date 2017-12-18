@@ -77,11 +77,19 @@
 <script>
 
   var basic = $('#main-cropper').croppie({
-    viewport: { width: 250, height: 250 },
-    boundary: { width: 300, height: 300 },
-    showZoomer: false,
-    url: 'http://lorempixel.com/500/400/'
-  });
+    viewport: {
+        width: 200,
+        height: 200,
+        showZoomer: false,
+        type: 'circle'
+
+    },
+    boundary: {
+        showZoomer: false,
+        width: 300,
+        height: 300
+    }
+});
 
   function readFile(input) {
     if (input.files && input.files[0]) {
@@ -104,6 +112,8 @@
     $('.actionDone').toggle();
     $('.actionUpload').toggle();
   })
+
+
 </script>
 
 
