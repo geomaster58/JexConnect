@@ -18,5 +18,9 @@ class PagesController < ApplicationController
     def meetings
 
     end
+
+    def connections
+       @connections = current_user.connections 
+    end
     
 end
