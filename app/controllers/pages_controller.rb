@@ -20,7 +20,9 @@ class PagesController < ApplicationController
     end
 
     def connections
-       @connections = current_user.connections 
+       @connections = current_user.connections
+       @users = []
+       @connections.each {|x| @users << User.find(x.connection_id) } 
     end
     
 end

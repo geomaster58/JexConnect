@@ -32,5 +32,10 @@ module ApplicationHelper
     end
   end
 
+  def connection users
+    users.each do |x|
+       "hello"
+    end  
+  end
    
 end
