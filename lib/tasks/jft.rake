@@ -7,7 +7,8 @@ namespace :jft do
     text = doc.css("table")
     date = text.css('tr')[0].css('td')[0].css("h2")[0].text
     print date
-    Jft.create(date: date)
+    data = {date: date}
+    print data
   end
 
 end
