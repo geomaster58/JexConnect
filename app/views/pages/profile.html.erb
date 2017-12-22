@@ -15,7 +15,7 @@
       </style>
       <%= first_name current_user %> 
       <%= last_name current_user %>
-      <hr>
+      <hr2>
     </div>
     <div class="cleandate">
       <%= start_date(current_user).strftime("%m/%d/%y") unless start_date(current_user).nil? %> 
@@ -54,25 +54,37 @@
 
   const commentTemplate = comment => (
     `
-    <div class="card commentcard">
-      <div class="comment">
-        <style>
-          @import url('https://fonts.googleapis.com/css?family=Asap');
-        </style>
-        <p>${comment.value}</p>
-        <div class="utils">
-          <div data-like="${comment.id}">Like ${comment.likes}</div>
-          <div data-share="${comment.id}">Share</div>
-          <div data-comment="${comment.id}">Comment</div>
+    <div class="comment">
+        <div class="card-block">
+          <div class="row">
+            <div class="col-md-2">
+              <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img-comment" %>
+              <p class="comment-name"><%= first_name current_user %>
+                <%= last_name current_user %></p>
+                <div class="comment-start"></div>
+                <style>
+                  @import url('https://fonts.googleapis.com/css?family=Asap');
+                </style>
+
+                ${comment.value}
+                <hr>
+                <div class="utils">
+                  <div data-like="${comment.id}">Like ${comment.likes}</div>
+                  <div data-share="${comment.id}">Share</div>
+                  <div data-comment="${comment.id}">Comment</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
     `
     );
 
   let comments = [];
 
+  
   function renderComments() {
     const markup = comments.sort((a, b) => b.id - a.id).map(comment => commentTemplate(comment)).join('');
     commentBox.innerHTML = markup;
@@ -113,6 +125,8 @@
       textBox.value = "";
     }
   });
+
+
 
 </script>
 
