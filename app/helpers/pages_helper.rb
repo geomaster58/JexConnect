@@ -12,4 +12,8 @@ module PagesHelper
      end 
   end
 
+  def connection connections
+    "<p>placeholder</p>".html_safe    
+  end
+
 end
