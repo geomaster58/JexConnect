@@ -9,7 +9,7 @@
   margin-right: auto;
   margin-top: 105px;
   padding: 2em;
-  background-color: rgb(17, 17, 17);
+  background-color: #eee;
   color: #444;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -106,6 +106,10 @@
   margin-top: -4px;
 }
 
+p {
+  margin-top: -30px;
+}
+
 .comment-name {
       font-size: 14px;
       margin-left: 50px;
@@ -150,6 +154,7 @@ hr {
   justify-content: space-between;
   width: 50%;
   color: black;
+  background-color: white;
   cursor: pointer;
   margin: 1px;
   margin-bottom: -55px;

@@ -86,6 +86,10 @@ hr2 {
   margin-top: -4px;
 }
 
+p {
+  margin-top: -30px;
+}
+
 .comment-name {
       font-size: 14px;
       margin-left: 50px;
@@ -133,7 +137,13 @@ hr {
   cursor: pointer;
   margin: 1px;
   margin-bottom: -55px;
+  position: right;
   background-color: #eee;
+  
+}
+
+.like {
+  border: 1px solid black;
 }
 
 textarea{
@@ -179,8 +189,8 @@ textarea{
 
 @media (max-width: 550px) {
   body {
-    width: 92%;
-    margin-left: 16px;
+    width: 100%;
+    margin-left: 0px;
   }
 }
 

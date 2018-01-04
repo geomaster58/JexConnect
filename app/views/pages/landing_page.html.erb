@@ -34,8 +34,7 @@
           <div class="row">
             <div class="col-md-2">
               <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img-comment" %>
-              <p class="comment-name"><%= first_name current_user %>
-                <%= last_name current_user %></p>
+              <p><%= link_to ((first_name current_user) + " " + (last_name current_user)), profile_path, class: "comment-name" %></p>
                 <div class="comment-start"></div>
                 <style>
                   @import url('https://fonts.googleapis.com/css?family=Asap');
