@@ -1,5 +1,9 @@
 # README
 
+## Guide for Jft Scraper for frontend
+- There is a instance variable called @jft on the landing page
+- Call @jft.date for the date or you can call .heading, .page_num, .sub_heading, .basic_text_page_num, .content, .just_for_today, and .copyright to access the various pieces. They go in order down the page on Jft.
+
 ## GOALS
 
 - create pages

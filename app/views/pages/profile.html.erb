@@ -2,6 +2,7 @@
 <%= stylesheet_link_tag "profile" %>
 
 <div class="card">
+
   <div class="material-icons">
     <%= link_to "edit", controller: "infos", action: "edit", id: current_user.infos.first.id %>
   </div>
@@ -75,6 +76,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
     `

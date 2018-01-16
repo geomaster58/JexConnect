@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     before_action :authenticate_user! 
     
     def landing_page
-
+        @jft = JftTool.grab_html
     end
 
     def profile
@@ -17,6 +17,12 @@ class PagesController < ApplicationController
 
     def meetings
 
+    end
+
+    def connections
+       @connections = current_user.connections
+       @users = []
+       @connections.each {|x| @users << User.find(x.connection_id) } 
     end
     
 end

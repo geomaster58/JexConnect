@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'connections', to: 'pages#connections'
   resources :infos
   # get "/settings", to: "devise/registrations#edit"
+  resources :users_connect
+  get "connect", to: "users_connect#connect"
 
   get 'meetings', to: 'pages#meetings'
   get 'area', to: 'pages#area'

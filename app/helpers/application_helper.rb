@@ -31,4 +31,11 @@ module ApplicationHelper
       "0 years and 0 days"  
     end
   end
+
+  def connection users
+    users.each do |x|
+       "hello"
+    end  
+  end
+   
 end
