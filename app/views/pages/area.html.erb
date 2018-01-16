@@ -4,7 +4,7 @@
   <h1 class="arealocation">UTAH COUNTY</h1>
   <div class="card">
     <div class="profile-img">
-      <img src=https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg class="profile-img" style="width:4.5em; height:4.5em" />
+      <%= image_tag info_img(current_user.infos.first.picture), width: '100%', class: "profile-img" %>
     </div>
 
     <div class="row">
