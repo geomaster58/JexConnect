@@ -4,6 +4,16 @@
 - There is a instance variable called @jft on the landing page
 - Call @jft.date for the date or you can call .heading, .page_num, .sub_heading, .basic_text_page_num, .content, .just_for_today, and .copyright to access the various pieces. They go in order down the page on Jft.
 
+# Current Week Goals
+
+- ActionCable for posts.
+- ActionCable for comments.   
+- Maybe wire up search bar.
+- Maybe wire up area search mechanism.
+- Look into makeing croppie actually save pictures.
+- Connections on page and making it add/ deleteable/ blockable.
+- Connection Approval system.  
+
 ## GOALS
 
 - create pages
@@ -64,9 +74,4 @@ x create users / users can drop in on other areas
 
 
 
-PLAN FOR FIXING BACKEND PROBLEM/ DEVISE PROBLEM
-- undo migrations.
-- create a new table for the attributes. 
-- connect attributes to users through another table.
-- rework frontend to include this. 
-- use status enum for clean/sober/dosent wish to divulge
+
