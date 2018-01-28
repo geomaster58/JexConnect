@@ -50,10 +50,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>JS Bin</title>
-        <form data-commentform="" style="margin-bottom: 20px;">
-          <textarea data-textbox=""></textarea>
-          <button  class="btn waves-effect waves-light" type="submit">Post</button>
-        </form>
+        
+          <%= form_for @post, url: "#", style: "margin-bottom: 20px;" do |f| %>
+            <%= f.text_area :body, data_textbox: "" %>
+            <%= f.submit class: "btn waves-effect waves-light" %>
+          <% end %>
+        
         <div data-comments="" class="comments"></div> 
       </div>
     </div>      
@@ -61,9 +63,9 @@
 
   <script>
     var request = new XMLHttpRequest ();
-    const form = document.querySelector('[data-commentform]');
+    const form = document.querySelector('[data_commentform]');
     const commentBox = document.querySelector('[data-comments]');
-    const textBox = document.querySelector('[data-textbox]');
+    const textBox = document.querySelector('[data_textbox]');
 
     const commentTemplate = comment => (
       ` 

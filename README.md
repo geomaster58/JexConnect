@@ -12,7 +12,11 @@
 - Maybe wire up area search mechanism.
 - Look into makeing croppie actually save pictures.
 - Connections on page and making it add/ deleteable/ blockable.
-- Connection Approval system.  
+- Connection Approval system. 
+
+## Bugs
+
+- Cant login properly after resetting database. Tried creating new user but its not working anymore 
 
 ## GOALS
 

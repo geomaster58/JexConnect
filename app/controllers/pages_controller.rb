@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     
     def landing_page
         @jft = JftTool.grab_html
+        @post = Post.new
     end
 
     def profile
