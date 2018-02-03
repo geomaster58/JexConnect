@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :destroy, :update]
 
   def create
-    @post = current_user.posts.build(comment_params)
+    @post = current_user.posts.build(post_params)
   end
 
   
