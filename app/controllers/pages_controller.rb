@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
     before_action :authenticate_user!
     
-    before_action :authenticate_user! 
+     
     
     def landing_page
         @jft = JftTool.grab_html

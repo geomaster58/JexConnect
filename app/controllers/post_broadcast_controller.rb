@@ -1,0 +1,2 @@
+class PostBroadcastController < ApplicationController
+end
