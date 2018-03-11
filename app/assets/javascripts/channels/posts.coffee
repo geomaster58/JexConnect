@@ -15,8 +15,8 @@ jQuery(document).on 'turbolinks:load', ->
       received: (data) ->
         post.append data['message']
 
-      send_message: (body) ->
-        @perform 'send_message', body: body
+      send_message: (data) ->
+        @perform 'send_message', data: data
 
     $('#new_message').submit (e) ->
       $this = $(this)

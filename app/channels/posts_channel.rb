@@ -8,6 +8,6 @@ class PostsChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    Post.create!(body: data['message'], user_id: current_user.id)
+    current_user.post.create!(body: data['message'])
   end
 end
